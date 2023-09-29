@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1040336219074",
+    "firebase_url": "https://personelkaydet-b1b25-default-rtdb.firebaseio.com",
+    "project_id": "personelkaydet-b1b25",
+    "storage_bucket": "personelkaydet-b1b25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040336219074:android:41244fc438fa356a29c45b",
+        "android_client_info": {
+          "package_name": "com.adilegungor.gungorecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040336219074-qc522fe5naaf7csa4mrfbtdlqq81ta7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABPWPT5_WByX1iDXA_ORbObEF1BlU83sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040336219074-qc522fe5naaf7csa4mrfbtdlqq81ta7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

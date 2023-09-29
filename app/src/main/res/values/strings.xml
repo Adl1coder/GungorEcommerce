@@ -1,0 +1,37 @@
+<resources>
+    <string name="login">GİRİŞ</string>
+    <string name="signup">KAYIT</string>
+    <string name="signinTosignup">Hesabın var mı? KAYDOL</string>
+    <string name="signupTosignin"> Zaten hesabım var, GİRİŞ YAP</string>
+    <string name="hello_blank_fragment">Selamlar</string>
+    <string name="password">Şifre</string>
+    <string name="email">Email</string>
+    <string name="discounted_products">İNDİRİMLER!</string>
+    <string name="all_products">TÜM ÜRÜNLER</string>
+    <string name="all">Tümü</string>
+    <string name="favorites">FAVORİLER</string>
+    <string name="favoritesUpper">FAVORİLER</string>
+    <string name="cartUpper">SEPET</string>
+    <string name="payment">ÖDEME BİLGİLERİ</string>
+    <string name="cart">SEPET</string>
+    <string name="search">ARAMA</string>
+    <string name="home">ANASAYFA</string>
+    <string name="my_favorites">FAVORİLERİM</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="log_out">ÇIKIŞ</string>
+    <string name="male">Erkek</string>
+    <string name="female">Kadın</string>
+    <string name="address">Adres</string>
+    <string name="clear_all">TÜMÜNÜ SİL </string>
+    <string name="total_amount">Toplam Tutar</string>
+    <string name="card_name_surname">Kart Üzerindeki İsim ve Soyisim</string>
+    <string name="card_number">Kart Numaranız</string>
+    <string name="card_date">Ay / Yıl</string>
+    <string name="cvc">CVC</string>
+    <string name="pay">Ödeme</string>
+    <string name="return_home_page">Alışverişe devam ediniz.</string>
+    <string name="result_text">Siparişiniz alındı !</string>
+    <string name="buy">Satın Al</string>
+    <string name="app_name">Mağazanız</string>
+
+</resources>
