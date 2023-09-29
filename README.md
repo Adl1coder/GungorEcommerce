@@ -3,7 +3,7 @@ Final assignment | Android Programming with Kotlin Academy - Sisterslab
 
 ## Özellikler
 
-Uygulamamız aşağıdaki temel özelliklere sahiptir:
+Uygulama aşağıdaki temel özelliklere sahiptir:
 
 - **MVVM (Model-View-ViewModel)**: Uygulama, Model-View-ViewModel tasarım deseni kullanılarak geliştirilmiştir. Bu, uygulamanın daha iyi modüler ve bakımı kolay bir şekilde oluşturulmasına yardımcı olur.
 
