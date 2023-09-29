@@ -7,7 +7,7 @@ import android.view.View
 // Resim yükleme işlevi
 fun ImageView.loadImage(url: String?) {
     Glide.with(this.context).load(url).into(this)
-}
+} 
 
 // Görünürlüğü gizleme işlevi
 fun View.gone() {

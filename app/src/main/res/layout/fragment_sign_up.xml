@@ -52,7 +52,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="64dp"
             android:inputType="textPassword"
             android:textColor="?android:attr/colorFocusedHighlight" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -64,7 +64,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="83dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/light_blue"
         android:text="@string/signup"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
