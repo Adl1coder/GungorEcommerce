@@ -46,3 +46,5 @@ Uygulamanın yerel olarak çalıştırılması için aşağıdaki adımları tak
 
 Uygulamayı geliştirmek veya özelleştirmek için dökümantasyon ve kaynak kodu inceleyebilirsiniz. 
 
+## ekran görüntüsü
+
