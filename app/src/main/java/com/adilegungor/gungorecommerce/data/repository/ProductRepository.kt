@@ -13,6 +13,7 @@ import javax.inject.Inject
 //response and process
 //hilt
 class ProductRepository @Inject constructor(
+    //uzak ve yerel veritabanı erişimi
         private val productService: ProductService,
         private val productDao: ProductDao,
 ) {
