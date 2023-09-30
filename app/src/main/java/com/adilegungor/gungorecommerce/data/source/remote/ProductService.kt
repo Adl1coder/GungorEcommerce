@@ -45,8 +45,8 @@ interface ProductService {
     suspend fun addProductToCart(@Body request: AddToCartRequest): CRUDResponse
 
     @POST(DELETE_CART_PRODUCTS)
-    suspend fun deleteProductFromCart(@Body request: DeleteFromCartRequest): CRUDResponse
-
+    suspend fun deleteProductFromCart(@Body request: DeleteFromCartRequest): CRUDResponse//yanıt
+//body type: veriyi gövdeye koy
     @POST(CLEAR_CART_PRODUCTS)
     suspend fun clearProductFromCart(@Body request: ClearCartRequest): CRUDResponse
 }
