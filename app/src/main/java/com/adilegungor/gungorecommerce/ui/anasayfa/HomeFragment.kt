@@ -29,13 +29,21 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Bottom Navigation Visibility
-        bottomNavigationView = getActivity()?.findViewById(R.id.bottomNavigationView);
-        bottomNavigationView?.setVisibility(View.VISIBLE);
-
         with(binding) {
             rvAllProducts.adapter = productAdapter
             rvDiscountedProducts.adapter = salesProductAdapter
+            radioGroup.setOnCheckedChangeListener { group, checkedId ->
+                if (checkedId == R.id.rb_all) {
+                    viewModel.getProducts()
+                } else {
+                    val category = when (checkedId) {
+                        R.id.rb_notebook -> "notebook"
+                        R.id.rbmntr -> "monitor"
+                        else -> "all"
+                    }
+                    viewModel.getProductsByCategory(category)
+                }
+            }
 
 
 

@@ -8,6 +8,8 @@
     <string name="email">Email</string>
     <string name="discounted_products">İNDİRİMLER!</string>
     <string name="all_products">TÜM ÜRÜNLER</string>
+    <string name="notebook">notebook</string>
+    <string name="monitor">monitor</string>
     <string name="all">Tümü</string>
     <string name="favorites">FAVORİLER</string>
     <string name="favoritesUpper">FAVORİLER</string>
@@ -33,5 +35,8 @@
     <string name="result_text">Siparişiniz alındı !</string>
     <string name="buy">Satın Al</string>
     <string name="app_name">Mağazanız</string>
+    <string name="console">Konsol</string>
+    <string name="desktop">Desktop</string>
+    <string name="headset">Headset</string>
 
 </resources>
