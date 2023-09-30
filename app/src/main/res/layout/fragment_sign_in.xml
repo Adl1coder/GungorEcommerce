@@ -11,22 +11,24 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="340dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="text"
         android:textColor="?android:attr/colorFocusedHighlight"
-        android:textColorHint="#3E3E3E"
+        android:textColorHint="#D5DCDD"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/til_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="332dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:textColor="@color/white"
             android:textColorHint="#EAE0E0" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,14 +38,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="48dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="@color/white"
-        android:textColorHint="#3E3E3E"
+        android:textColorHint="#B7C1C3"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +57,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="textPassword"
             android:textColor="@color/light_blue"
             android:textColorHint="#FFF8F8" />
@@ -61,12 +65,10 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="75dp"
+        android:layout_width="180dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="@color/light_blue"
         android:text="@string/login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -75,6 +77,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_dont_have_an_account"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_password" />
 
@@ -85,6 +88,7 @@
         android:layout_marginBottom="36dp"
         android:text="@string/signinTosignup"
         android:textColor="@color/button_background_color"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

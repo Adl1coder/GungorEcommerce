@@ -17,4 +17,5 @@ fun View.gone() {
 // Görünürlüğü gösterme işlevi
 fun View.visible() {
     visibility = View.VISIBLE // View'ı görünür yapar
+    //buraya yeni eklemeler yapılabilir kod geliştirilebilir
 }

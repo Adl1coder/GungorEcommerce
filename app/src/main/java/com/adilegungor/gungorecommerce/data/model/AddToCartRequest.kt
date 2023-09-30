@@ -1,5 +1,5 @@
 package com.adilegungor.gungorecommerce.data.model
-//JSON formatları incelenerek classlar oluşturuldu.
+//JSON formatına göre classlar.
 data class AddToCartRequest(
     val userId: String,
     val productId: Int

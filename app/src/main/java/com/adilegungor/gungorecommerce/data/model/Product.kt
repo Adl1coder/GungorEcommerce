@@ -2,7 +2,7 @@ package com.adilegungor.gungorecommerce.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
-
+//dönüşüm
 @Parcelize
 data class Product(
     val id: Int?,

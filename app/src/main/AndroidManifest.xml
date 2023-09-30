@@ -7,9 +7,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/splas"
+        android:icon="@mipmap/app_icond"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/splas"
+        android:roundIcon="@mipmap/app_icond"
         android:supportsRtl="true"
         android:theme="@style/Theme.GungorECommerce"
         tools:targetApi="31">

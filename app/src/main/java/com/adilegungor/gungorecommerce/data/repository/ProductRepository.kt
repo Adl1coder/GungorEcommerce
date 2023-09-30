@@ -9,7 +9,7 @@ import com.adilegungor.gungorecommerce.data.model.ProductUI
 import com.adilegungor.gungorecommerce.data.source.local.ProductDao
 import com.adilegungor.gungorecommerce.data.source.remote.ProductService
 import javax.inject.Inject
-
+//try-catch blokları
 class ProductRepository @Inject constructor(
         private val productService: ProductService,
         private val productDao: ProductDao,

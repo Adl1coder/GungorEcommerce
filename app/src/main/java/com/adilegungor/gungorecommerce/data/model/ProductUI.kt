@@ -14,7 +14,8 @@ data class ProductUI(
     val count: Int,
     val saleState: Boolean
 ) {
-    //bu fonksiyon da product ui deki yani kull. dan ald. verileri product entitye e çeviriyor, işleme kolaylığı
+    //bu fonksiyon da product ui deki yani kull. dan ald. verileri product entitye e çeviriyor,
+    // işleme kolaylığı
     fun mapToProductEntity(): ProductEntity {
         return ProductEntity(
             id = id,

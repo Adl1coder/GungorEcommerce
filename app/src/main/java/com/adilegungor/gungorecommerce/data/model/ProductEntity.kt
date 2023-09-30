@@ -3,12 +3,12 @@ package com.adilegungor.gungorecommerce.data.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-// yerel veritabanı kull
+// yerel veritabanı kullanımı
 @Entity(tableName = "cart_products") //
 data class ProductEntity(
-  //autogenerate: otomatik artışı temsil eder
-    @PrimaryKey(autoGenerate = true)//birincil anahtar
-    @ColumnInfo(name = "id")//sütun bilgisi
+  //autogenerate: otomatik artış
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     val id: Int?,
 
     @ColumnInfo(name = "title")

@@ -15,7 +15,8 @@ import kotlin.reflect.KProperty
 // Verilen bir LayoutInflater işlevi kullanarak ViewBinding oluşturur.
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
     crossinline factory: (LayoutInflater) -> T
-) = lazy(LazyThreadSafetyMode.NONE) {
+//lazy: viewbindng nesnesini  sadece  ilk kez ihtiyaç olunca oluştur.
+) = lazy(LazyThreadSafetyMode.NONE) {  // bu işlemi tek bir iş parçacığında gerçekleştir
     factory(layoutInflater)
 }
 
