@@ -99,6 +99,7 @@ class ProductRepository @Inject constructor(
         return productService.deleteProductFromCart(request)
     }
 //sepeti boşalt
+    //product service ile uzak veri kaynağına req atar ve sonucu resource formda döndürür.
     suspend fun clearProductFromCart(request: ClearCartRequest): Resource<CRUDResponse> {
         return try {
             val response = productService.clearProductFromCart(request)
