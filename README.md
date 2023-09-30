@@ -46,5 +46,7 @@ Uygulamanın yerel olarak çalıştırılması için aşağıdaki adımları tak
 
 Uygulamayı geliştirmek veya özelleştirmek için dökümantasyon ve kaynak kodu inceleyebilirsiniz. 
 
-## ekran görüntüsü
+## uygulama demo:
+
+https://github.com/Adl1coder/GungorEcommerce/assets/93915867/5af3557e-c971-42a7-937c-55c5b37de681
 
