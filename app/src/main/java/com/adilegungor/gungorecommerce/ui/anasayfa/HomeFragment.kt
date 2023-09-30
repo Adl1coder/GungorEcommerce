@@ -39,6 +39,9 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
                     val category = when (checkedId) {
                         R.id.rb_notebook -> "notebook"
                         R.id.rbmntr -> "monitor"
+                        R.id.rbhdst->"headset"
+                        R.id.rbcnsl->"console"
+                        R.id.rbdsktop->"desktop"
                         else -> "all"
                     }
                     viewModel.getProductsByCategory(category)
