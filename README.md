@@ -46,6 +46,10 @@ Uygulamanın yerel olarak çalıştırılması için aşağıdaki adımları tak
 
 Uygulamayı geliştirmek veya özelleştirmek için dökümantasyon ve kaynak kodu inceleyebilirsiniz. 
 
+## Modül
+Proje akışı ve modüllerden kısaca bahsettiğim şu mini yazıya bakın lütfen.
+https://adilegungor.medium.com/e-ticaret-uygulamas%C4%B1-ba078fec348d
+
 ## uygulama demo:
 
 https://github.com/Adl1coder/GungorEcommerce/assets/93915867/5af3557e-c971-42a7-937c-55c5b37de681
