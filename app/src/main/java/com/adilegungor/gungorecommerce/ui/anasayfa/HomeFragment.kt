@@ -29,6 +29,9 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //visibility
+        bottomNavigationView = getActivity()?.findViewById(R.id.bottomNavigationView);
+        bottomNavigationView?.setVisibility(View.VISIBLE);
         with(binding) {
             rvAllProducts.adapter = productAdapter
             rvDiscountedProducts.adapter = salesProductAdapter

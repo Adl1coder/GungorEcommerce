@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.adilegungor.gungorecommerce.R
 import com.adilegungor.gungorecommerce.common.viewBinding
 import com.adilegungor.gungorecommerce.databinding.FragmentProfileBinding
@@ -14,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,43 +21,54 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private val binding by viewBinding(FragmentProfileBinding::bind)
     private lateinit var auth: FirebaseAuth
+    private var bottomNavigationView: BottomNavigationView? = null
     private val viewModel by viewModels<ProfileViewModel>()
 
-    private val sharedPreferencesName = "UserPreferences"
-    private val sharedPreferences by lazy { requireContext().getSharedPreferences(sharedPreferencesName, Context.MODE_PRIVATE) }
+    private val sharedPreferencesName = "MyPreferences"
+    private val keyGender = "userGender"
+    private val keyAvatar = "userAvatar"
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        sharedPreferences = requireContext().getSharedPreferences(sharedPreferencesName, Context.MODE_PRIVATE)
+
+
         // Bottom Navigation Visibility
-        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView.visibility = View.GONE
+        bottomNavigationView = getActivity()?.findViewById(R.id.bottomNavigationView);
+        bottomNavigationView?.setVisibility(View.GONE);
 
         auth = Firebase.auth
 
         with(binding) {
-            val keyGender = "userGender"
-            val keyAvatar = "userAvatar"
 
+            // Verileri SharedPreferences'ten yükle
             val savedGender = sharedPreferences.getString(keyGender, null)
             val savedAvatarResource = sharedPreferences.getInt(keyAvatar, R.drawable.avatargirl)
 
             if (savedGender != null) {
-                val genderResId = if (savedGender == "boy") R.drawable.avatarboy else R.drawable.avatargirl
-                rbBoy.isChecked = savedGender == "boy"
-                rbGirl.isChecked = savedGender == "girl"
-                ivProfile.setImageResource(genderResId)
+                if (savedGender == "boy") {
+                    rbBoy.isChecked = true
+                } else if (savedGender == "girl") {
+                    rbGirl.isChecked = true
+                }
+
+                ivProfile.setImageResource(savedAvatarResource)
             }
 
-            radioGroup.setOnCheckedChangeListener { _, checkedId ->
-                val avatarResource = when (checkedId) {
-                    R.id.rb_boy -> R.drawable.avatarboy
-                    R.id.rb_girl -> R.drawable.avatargirl
-                    else -> R.drawable.avatargirl
+            radioGroup.setOnCheckedChangeListener { group, checkedId ->
+
+                when (checkedId) {
+                    R.id.rb_boy -> {
+                        ivProfile.setImageResource(R.drawable.avatarboy)
+                        saveAvatarAndGender(R.drawable.avatarboy, "boy")
+                    }
+                    R.id.rb_girl -> {
+                        ivProfile.setImageResource(R.drawable.avatargirl)
+                        saveAvatarAndGender(R.drawable.avatargirl, "girl")
+                    }
                 }
-                ivProfile.setImageResource(avatarResource)
-                val gender = if (checkedId == R.id.rb_boy) "boy" else "girl"
-                saveAvatarAndGender(avatarResource, gender)
             }
 
             tvEmail.text = auth.currentUser?.email.toString()
@@ -75,23 +86,43 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                 findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToSignInFragment())
             }
 
+            // Observe LiveData for selected gender
             viewModel.selectedGender.observe(viewLifecycleOwner) { gender ->
-                rbBoy.isChecked = gender == "boy"
-                rbGirl.isChecked = gender == "girl"
+                when (gender) {
+                    "boy" -> {
+                        binding.rbBoy.isChecked = true
+                    }
+
+                    "girl" -> {
+                        binding.rbGirl.isChecked = true
+                    }
+                }
             }
 
+            // Observe LiveData for avatar resource
             viewModel.avatarResource.observe(viewLifecycleOwner) { avatarResource ->
-                ivProfile.setImageResource(avatarResource)
+                binding.ivProfile.setImageResource(avatarResource)
             }
         }
+    }
+
+    // Save gender to shared preferences
+    fun saveGender(gender: String) {
+        val editor = sharedPreferences.edit()
+        editor.putString(keyGender, gender)
+        editor.apply()
+    }
+
+    private fun saveAvatar(avatarResource: Int) {
+        val editor = sharedPreferences.edit()
+        editor.putInt(keyAvatar, avatarResource)
+        editor.apply()
     }
 
     private fun saveAvatarAndGender(avatarResource: Int, gender: String) {
         viewModel.updateAvatar(avatarResource, gender)
-        sharedPreferences.edit().apply {
-            putInt("userAvatar", avatarResource)
-            putString("userGender", gender)
-            apply()
-        }
+        saveAvatar(avatarResource)
+        saveGender(gender)
     }
+
 }

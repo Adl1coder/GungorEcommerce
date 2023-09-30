@@ -25,12 +25,12 @@
             android:id="@+id/toolbar"
             android:layout_width="368dp"
             android:layout_height="37dp"
-            android:background="@color/blue1"
+            android:background="@color/black"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/baseline_arrow_circle_left_24" />
+            app:navigationIcon="@drawable/baseline_keyboard_double_arrow_left_24" />
 
         <ImageView
             android:id="@+id/iv_product"
