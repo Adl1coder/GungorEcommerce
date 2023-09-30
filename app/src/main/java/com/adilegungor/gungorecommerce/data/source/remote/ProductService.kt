@@ -19,9 +19,11 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
-
+//http istekleri
 interface ProductService {
     @GET(GET_PRODUCTS)
+
+    //retrofitin coroutine desteği
     suspend fun getProducts(): GetProductsResponse
 
     @GET(GET_PRODUCT_DETAIL)
