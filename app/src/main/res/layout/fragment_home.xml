@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,7 +39,6 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="9dp"
             android:fontFamily="serif-monospace"
-            android:gravity="left"
             android:text="@string/discounted_products"
             android:textColor="@color/light_blue"
             android:textSize="20sp"
@@ -62,6 +62,7 @@
             app:spanCount="2" />
 
 
+
         <TextView
             android:id="@+id/tv_products"
             android:layout_width="wrap_content"
@@ -76,6 +77,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_discounted_products" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_products"
+            app:spanCount="2"
+            tools:itemCount="6"
+            tools:listitem="@layout/itemcategory" />
+
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="381dp"
@@ -86,73 +104,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_products">
 
-            <RadioButton
-                android:id="@+id/rb_all"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:checked="true"
-                android:fontFamily="serif-monospace"
-                android:text="@string/all"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rb_notebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/notebook"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rbmntr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/monitor"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rbcnsl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/console"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rbhdst"
-                android:layout_width="93dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/headset"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rbdsktop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/desktop"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
         </RadioGroup>
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_all_products"
