@@ -19,13 +19,14 @@ class ProductRepository @Inject constructor(
 ) {
 
     suspend fun getProducts(): Resource<List<ProductUI>> {
+        //uzaktan veri kayn. erişir verileri dönüştürür(product ui obj)sonra resource u kull.
         return try {
             Resource.Success(productService.getProducts().products?.map { it.mapToProductUI() }.orEmpty())
         } catch (e: Exception) {
             Resource.Error(e)
         }
     }
-
+//tüm ürünler
     suspend fun getSaleProducts(): Resource<List<ProductUI>> {
         return try {
             Resource.Success(productService.getSaleProducts().products?.map { it.mapToProductUI() }.orEmpty())
@@ -33,7 +34,7 @@ class ProductRepository @Inject constructor(
             Resource.Error(e)
         }
     }
-
+//belli kategoriye aiy ürünler
     suspend fun getProductsByCategory(category: String): Resource<List<ProductUI>>  {
         return try {
             Resource.Success(productService.getProductsByCategory(category).products?.map { it.mapToProductUI() }.orEmpty())
@@ -41,7 +42,7 @@ class ProductRepository @Inject constructor(
             Resource.Error(e)
         }
     }
-
+//ürün detay
     suspend fun getProductsDetail(id: Int): Resource<ProductUI> {
         return try {
             productService.getProductDetail(id).product?.let {
