@@ -77,15 +77,15 @@ class ProductRepository @Inject constructor(
             Resource.Error(e)
         }
     }
-
+//favoriye ekle
     suspend fun addProductToFav(product: ProductUI) {
         productDao.addProduct(product.mapToProductEntity())
     }
-
+//sepete ekle
     suspend fun addProductToCart(addToCartRequest: AddToCartRequest): CRUDResponse {
         return productService.addProductToCart(addToCartRequest)
     }
-
+//sepettekşleri listele
     suspend fun getCartProduct(userId: String): Resource<List<ProductUI>> {
         return try {
             val response = productService.getCartProducts(userId)
@@ -94,11 +94,11 @@ class ProductRepository @Inject constructor(
             Resource.Error(e)
         }
     }
-
+//sepetten ürün sil
     suspend fun deleteProductFromCart(request: DeleteFromCartRequest): CRUDResponse {
         return productService.deleteProductFromCart(request)
     }
-
+//sepeti boşalt
     suspend fun clearProductFromCart(request: ClearCartRequest): Resource<CRUDResponse> {
         return try {
             val response = productService.clearProductFromCart(request)
