@@ -89,56 +89,58 @@
 
             <RadioButton
                 android:id="@+id/rb_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
                 android:layout_marginEnd="8dp"
                 android:checked="true"
                 android:fontFamily="serif-monospace"
                 android:text="@string/all"
-                android:textColor="@color/button_background_color"
+                android:textColor="@color/light_blue"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <RadioButton
+                android:id="@+id/rbhdst"
+                android:layout_width="105dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/headset"
+                android:textColor="@color/a_yellow"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/rb_notebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="94dp"
+                android:layout_height="60dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="serif-monospace"
                 android:text="@string/notebook"
-                android:textColor="@color/button_background_color"
+                android:textColor="@color/green"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+
             <RadioButton
-                android:id="@+id/rbhdst"
-                android:layout_width="93dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/rbcnsl"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="8dp"
                 android:fontFamily="serif-monospace"
-                android:text="@string/headset"
-                android:textColor="@color/button_background_color"
+                android:text="@string/console"
+                android:textColor="?android:attr/colorFocusedHighlight"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/rbmntr"
-                android:layout_width="wrap_content"
+                android:layout_width="97dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="serif-monospace"
                 android:text="@string/monitor"
-                android:textColor="@color/button_background_color"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rbcnsl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="serif-monospace"
-                android:text="@string/console"
                 android:textColor="@color/button_background_color"
                 android:textSize="12sp"
                 android:textStyle="bold" />

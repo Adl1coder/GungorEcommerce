@@ -25,7 +25,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideChuckerInterceptor(@ApplicationContext context:Context) =  ChuckerInterceptor.Builder(context).build()
-
+     //chucker ı burada kullandım. Ağ isteklerini uygulama çalışma esnasında izlemek için.
     @Provides
     @Singleton
     fun provideOkHttpClient(chuckerInterceptor: ChuckerInterceptor) = OkHttpClient.Builder().apply {
@@ -36,7 +36,10 @@ object NetworkModule {
                 .build()
             chain.proceed(modifiedRequest)
         }
+         //addıntercopter ile ağ isteklerine özel başlık ekkl.
         addInterceptor(chuckerInterceptor)
+
+         //zaman aşımı süreleri belirleniyor
         readTimeout(TIMEOUT, TimeUnit.SECONDS)
         connectTimeout(TIMEOUT, TimeUnit.SECONDS)
         writeTimeout(TIMEOUT, TimeUnit.SECONDS)

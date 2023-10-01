@@ -16,7 +16,7 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="text"
-        android:textColor="?android:attr/colorFocusedHighlight"
+        android:textColor="@color/light_blue"
         android:textColorHint="#D5DCDD"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/til_password"
@@ -28,7 +28,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textColorHint="#EAE0E0" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,7 +57,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:textColor="@color/light_blue"
             android:textColorHint="#FFF8F8" />

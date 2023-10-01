@@ -25,7 +25,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
     private val viewModel by viewModels<HomeViewModel>()
     private val salesProductAdapter by lazy { SalesProductAdapter(this) }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
