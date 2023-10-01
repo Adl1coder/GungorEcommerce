@@ -32,17 +32,17 @@ class SalesProductAdapter (
         fun bind(product: ProductUI) = with(binding) {
             tvTitle.text = product.title
             tvCategory.text = product.category
-            tvPrice.text = "${product.price} TL"
+            tvPrice.text = "${product.price} ₺"
 
             imgProduct.loadImage(product.imageOne)
 
             if (product.saleState == true) {
                 tvSalePrice.isVisible = true
                 tvSalePrice.text = "${product.salePrice} ₺"
-                tvPrice.text = "${product.price} TL"
+                tvPrice.text = "${product.price} ₺"
                 tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             } else {
-                tvPrice.text = "${product.price} TL"
+                tvPrice.text = "${product.price} ₺"
                 tvSalePrice.isVisible = false
             }
 

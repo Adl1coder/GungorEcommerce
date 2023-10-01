@@ -121,7 +121,7 @@ class CartFragment : Fragment(R.layout.fragment_cart), CartProductsAdapter.CartP
         }
 
         viewModel.totalAmount.observe(viewLifecycleOwner) {
-            tvTotal.text = "${it} TL"
+            tvTotal.text = "${it} ₺"
         }
     }
 

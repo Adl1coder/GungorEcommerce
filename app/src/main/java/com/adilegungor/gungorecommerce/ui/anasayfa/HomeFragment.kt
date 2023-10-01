@@ -23,6 +23,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
     private var bottomNavigationView: BottomNavigationView? = null
     private val productAdapter by lazy { ProductAdapter(this) }
     private val viewModel by viewModels<HomeViewModel>()
+    //indirimli ürünleri listeler, dinleyici kendisi
     private val salesProductAdapter by lazy { SalesProductAdapter(this) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -73,7 +74,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
 
         observeData()
     }
-
+// verilerin ya dhata durumlarını gözlenmesi
     private fun observeData() = with(binding) {
         viewModel.homeState.observe(viewLifecycleOwner) { state ->
             when (state) {
@@ -88,6 +89,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
 
                 is HomeState.Error -> {
                     tvError.setText(state.throwable.message.orEmpty())
+                    //veri gelince progress bar gizlenir. Recyclerviewe veri eklenir
                     progressBar2.visibility = View.GONE
                     rvAllProducts.visibility = View.GONE
                     ivError.visibility = View.VISIBLE
@@ -116,11 +118,13 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
         }
     }
 
+    //ürüne tıklayınca detaya git
     override fun onProductClick(id: Int) {
         val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(id)
         findNavController().navigate(action)
     }
 
+//fav a tıklayınca fav e ekle ve msg göster.
     override fun onFavoriteClick(product: ProductUI) {
         viewModel.addProductToFav(product)
         Snackbar.make(requireView(), "Favorilere Eklendi!", Snackbar.LENGTH_SHORT).show()

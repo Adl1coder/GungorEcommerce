@@ -39,10 +39,10 @@ class ProductAdapter (
             if (product.saleState == true) {
                 tvSalePrice.isVisible = true
                 tvSalePrice.text = "${product.salePrice} ₺"
-                tvPrice.text = "${product.price} TL"
+                tvPrice.text = "${product.price} ₺"
                 tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             } else {
-                tvPrice.text = "${product.price} TL"
+                tvPrice.text = "${product.price} ₺"
                 tvSalePrice.isVisible = false
             }
 

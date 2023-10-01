@@ -28,7 +28,7 @@ class FavoriteAdapter(
 
         fun bind(product: ProductUI) = with(binding) {
             tvTitle.text = product.title
-            tvPrice.text = "${product.price} TL"
+            tvPrice.text = "${product.price} ₺"
 
             ivProduct.loadImage(product.imageOne)
 

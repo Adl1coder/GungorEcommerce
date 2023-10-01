@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
+//kalıtım + repo ile verilere erişim
 class HomeViewModel
     @Inject constructor(
         private val productRepository: ProductRepository, application: Application
@@ -25,6 +26,8 @@ class HomeViewModel
     val salesState: LiveData<SalesState>
         get() = _salesState
 
+
+    //başlatıcı
     init {
     }
 
