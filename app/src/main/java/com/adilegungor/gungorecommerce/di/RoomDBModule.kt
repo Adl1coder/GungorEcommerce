@@ -16,11 +16,15 @@ object RoomDBModule {
 
     @Provides
     @Singleton
+
+    //aş. @ notasyonu uyg. genel bağlamını (context) alır ve db yi oluşturur.
     fun provideRoomDB(@ApplicationContext context: Context) =
         Room.databaseBuilder(context, ProductRoomDB::class.java, "product_room_db").build()
-
+//burada bir product roomdb oluşturuldu
     @Provides
     @Singleton
+
+//aş. fonk. roomdb den dao oluşt. ve döndürür. - dao locale erişir-db etkileşimi
     fun provideDao(roomDB: ProductRoomDB) = roomDB.productsDao()
 
 }
