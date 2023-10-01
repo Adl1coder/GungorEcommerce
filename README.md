@@ -1,6 +1,9 @@
 # GungorEcommerce
 Final assignment | Android Programming with Kotlin Academy - Sisterslab
 
+## Açıklama:
+Bu kodu okuyan, kullanan veya yayınlayan geliştiriciler için yorum satırları eklemeye ve yeni yapılar kullanmaya devam ediyorum. Güncellemeye açık olan bu kodlara katkılarınız için şimdiden teşekkürler. Yeni mimariler, eksik kullanımlar veya herhangi bir öneriniz için bana profilimdeki adreslerden ulaşmanız mümkün. Mutlu kodlamalar!
+
 ## Özellikler
 
 Uygulama aşağıdaki temel özelliklere sahiptir:
