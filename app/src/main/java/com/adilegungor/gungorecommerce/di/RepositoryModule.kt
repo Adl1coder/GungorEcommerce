@@ -17,5 +17,7 @@ object RepositoryModule {
     @Singleton
     fun provideRepository(productService: ProductService, productDao: ProductDao) : ProductRepository =
         ProductRepository(productService, productDao)
-
+//uzak sunucudan veri çekmede retrofit servisini temsil eden nesne:product service
+    //local db veri yönetimi sağlar: productdao obj.
+    //ağ üzerinden veri çekme + yerel veri db ye bunları kaydetme: ProductRepository obj.
 }
