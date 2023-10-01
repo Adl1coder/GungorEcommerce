@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
-
+//dagger ile ağ işlemleri bağımlılıkları vs.
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
@@ -47,6 +47,8 @@ object NetworkModule {
 
     @Provides
     @Singleton
+
+    //okhhttp ile retrofit istemcisi oluşturur ve gson ekler, gson eklenmiş: JSON verileri nesnelere çeviriyor
     fun provideRetrofit(okHttpClient: OkHttpClient) = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(okHttpClient)
@@ -56,5 +58,5 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideService(retrofit: Retrofit) = retrofit.create<ProductService>()
-
+//api çağırmak için retrofit nesnesi kull. Product service oluşturuldu.
 }
