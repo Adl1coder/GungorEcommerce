@@ -14,10 +14,10 @@ import com.adilegungor.gungorecommerce.databinding.FragmentHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-
+//hilt usg
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductListener, SalesProductAdapter.ProductListener {
-
+//viewbinding ile xml deki görünümlere erişim
     private val binding by viewBinding(FragmentHomeBinding::bind)
 
     private var bottomNavigationView: BottomNavigationView? = null
@@ -28,7 +28,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //visibility
+        //visibility:görünürlük
         bottomNavigationView = getActivity()?.findViewById(R.id.bottomNavigationView);
         bottomNavigationView?.setVisibility(View.VISIBLE);
         with(binding) {
@@ -38,6 +38,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductAdapter.ProductLis
                 if (checkedId == R.id.rb_all) {
                     viewModel.getProducts()
                 } else {
+                    //kategoriye göre listeleme
                     val category = when (checkedId) {
                         R.id.rb_notebook -> "notebook"
                         R.id.rbmntr -> "monitor"
