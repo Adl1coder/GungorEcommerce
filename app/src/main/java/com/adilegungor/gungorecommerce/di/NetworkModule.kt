@@ -16,10 +16,13 @@ import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 //dagger ile ağ işlemleri bağımlılıkları vs.
+//aş. etiketler modülün dagger olduğunu ve bağımlıkların singletona kurulcağını gösterir. isimden bariz.
+//yaşam döngüsü boyunca 1 kez kur bağ.ın yön.
 @Module
 @InstallIn(SingletonComponent::class)
+//hilt bağ. tems. eden modülümüz
 object NetworkModule {
-
+  //zaman aşımı ağ isteklerinin ne kadar bekleyeceiği hk.
     private const val TIMEOUT = 60L
 
     @Provides
