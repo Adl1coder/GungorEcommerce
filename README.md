@@ -55,5 +55,6 @@ https://adilegungor.medium.com/e-ticaret-uygulamas%C4%B1-ba078fec348d
 
 ## uygulama demo:
 
-https://github.com/Adl1coder/GungorEcommerce/assets/93915867/5af3557e-c971-42a7-937c-55c5b37de681
+https://github.com/Adl1coder/GungorEcommerce/assets/93915867/58ef3023-afd1-4123-acdf-19a95992ae78
+
 
