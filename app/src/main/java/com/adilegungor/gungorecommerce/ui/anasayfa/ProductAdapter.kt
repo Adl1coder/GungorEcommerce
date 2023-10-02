@@ -66,6 +66,7 @@ class ProductAdapter (
         override fun areContentsTheSame(oldItem: ProductUI, newItem: ProductUI): Boolean {
             return oldItem == newItem
         }
+        //ürün karş.
     }
 
     interface ProductListener {
