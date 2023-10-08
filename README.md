@@ -57,7 +57,7 @@ https://adilegungor.medium.com/e-ticaret-uygulamas%C4%B1-ba078fec348d
 
 https://github.com/Adl1coder/GungorEcommerce/assets/93915867/58ef3023-afd1-4123-acdf-19a95992ae78
 
-##Sunum:
+## Sunum:
 https://www.canva.com/design/DAFv5_8tzZs/olTATfYxKP9uBoToJ1YFRg/edit?utm_content=DAFv5_8tzZs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
